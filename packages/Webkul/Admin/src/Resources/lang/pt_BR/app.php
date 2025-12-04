@@ -1952,6 +1952,8 @@ return [
         ],
 
         'groups' => [
+            'customer-associate' => 'Este grupo possui clientes associados e não pode ser excluído.',
+
             'index' => [
                 'title' => 'Grupos',
 
@@ -2302,8 +2304,8 @@ return [
                     'any-conditions-true'                       => 'Qualquer Condição Verdadeira',
                     'apply-to-shipping'                         => 'Aplicar ao Envio',
                     'attribute-family'                          => 'Família de Atributos',
-                    'attribute-name-children-only'              => 'Nome do Atributo Somente para Categorias Filhas',
-                    'attribute-name-parent-only'                => 'Nome do Atributo Somente para Categorias Principais',
+                    'attribute-name-children-only'              => ':attribute_name (Somente Categorias Filhas)',
+                    'attribute-name-parent-only'                => ':attribute_name (Somente Categorias Principais)',
                     'auto-generate-coupon'                      => 'Gerar Cupom Automaticamente',
                     'back-btn'                                  => 'Voltar',
                     'buy-x-get-y-free'                          => 'Compre X e Leve Y de Graça',
@@ -2379,8 +2381,8 @@ return [
                     'any-conditions-true'                       => 'Qualquer Condição Verdadeira',
                     'apply-to-shipping'                         => 'Aplicar ao Envio',
                     'attribute-family'                          => 'Família de Atributos',
-                    'attribute-name-children-only'              => 'Nome do Atributo Somente para Categorias Filhas',
-                    'attribute-name-parent-only'                => 'Nome do Atributo Somente para Categorias Principais',
+                    'attribute-name-children-only'              => ':attribute_name (Somente Categorias Filhas)',
+                    'attribute-name-parent-only'                => ':attribute_name (Somente Categorias Principais)',
                     'auto-generate-coupon'                      => 'Gerar Cupom Automaticamente',
                     'back-btn'                                  => 'Voltar',
                     'buy-x-get-y-free'                          => 'Compre X e Leve Y de Graça',
@@ -3712,7 +3714,7 @@ return [
                 'title' => 'Geral',
 
                 'general' => [
-                    'info'  => 'Definir opções de unidades e ativar ou desativar migalhas de pão.',
+                    'info'  => 'Defina as opções de unidade e ative ou desative as migalhas de pão.',
                     'title' => 'Geral',
 
                     'unit-options' => [
@@ -3726,6 +3728,12 @@ return [
                         'shop'       => 'Migalhas de Pão da Loja',
                         'title'      => 'Migalhas de Pão',
                         'title-info' => 'Ativar ou desativar a navegação por migalhas de pão na loja.',
+                    ],
+
+                    'visitor-options' => [
+                        'enable'     => 'Ativar opções de visitante',
+                        'title'      => 'Opções de visitante',
+                        'title-info' => 'Permite controlar o site para rastrear e contar o número de visitas, ajudando a monitorar a atividade geral e o engajamento dos visitantes.',
                     ],
                 ],
 
@@ -4893,6 +4901,16 @@ return [
                 'title'                    => 'Assistência de IA',
                 'vicuna-13b'               => 'Vicuna (13b)',
                 'vicuna-7b'                => 'Vicuna (7b)',
+            ],
+
+            'errors' => [
+                'file-extension-mismatch'        => 'A extensão do arquivo não corresponde ao tipo de arquivo.',
+                'file-upload-failed'             => 'Falha no upload do arquivo.',
+                'http-error'                     => 'Erro HTTP.',
+                'invalid-file-type'              => 'Tipo de arquivo inválido. Tipos permitidos: JPEG, PNG, GIF, WebP, SVG',
+                'invalid-json'                   => 'JSON inválido.',
+                'no-file-uploaded'               => 'Nenhum arquivo enviado.',
+                'upload-failed'                  => 'Falha no upload da imagem devido a um erro de transporte XHR.',
             ],
         ],
     ],

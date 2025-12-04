@@ -105,6 +105,8 @@
                                             class="max-md:h-[100px] max-md:w-[100px]"
                                             src="{{ bagisto_asset('images/thank-you.png') }}"
                                             alt="@lang('shop::app.categories.view.empty')"
+                                            loading="lazy"
+                                            decoding="async"
                                         />
 
                                         <p
@@ -149,6 +151,8 @@
                                             class="max-md:h-[100px] max-md:w-[100px]"
                                             src="{{ bagisto_asset('images/thank-you.png') }}"
                                             alt="@lang('shop::app.categories.view.empty')"
+                                            loading="lazy"
+                                            decoding="async"
                                         />
 
                                         <p
@@ -266,6 +270,8 @@
                         };
 
                         document.body.style.overflow ='scroll';
+
+                        this.isLoading = true;
 
                         this.$axios.get("{{ route('shop.api.products.index', ['category_id' => $category->id]) }}", {
                             params: this.queryParams

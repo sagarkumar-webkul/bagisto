@@ -1952,6 +1952,8 @@ return [
         ],
 
         'groups' => [
+            'customer-associate' => 'تحتوي هذه المجموعة على عملاء مرتبطين ولا يمكن حذفها.',
+
             'index' => [
                 'title' => 'المجموعات',
 
@@ -2302,8 +2304,8 @@ return [
                     'any-conditions-true'                       => 'أي شرط صحيح',
                     'apply-to-shipping'                         => 'تطبيق على الشحن',
                     'attribute-family'                          => 'عائلة السمة',
-                    'attribute-name-children-only'              => 'اسم السمة (الأطفال فقط)',
-                    'attribute-name-parent-only'                => 'اسم السمة (الوالدين فقط)',
+                    'attribute-name-children-only'              => ':attribute_name (الأطفال فقط)',
+                    'attribute-name-parent-only'                => ':attribute_name (الوالدين فقط)',
                     'auto-generate-coupon'                      => 'توليد تلقائي للقسائم',
                     'back-btn'                                  => 'رجوع',
                     'buy-x-get-y-free'                          => 'اشتري X واحصل على Y مجانًا',
@@ -2379,8 +2381,8 @@ return [
                     'any-conditions-true'                       => 'أي شرط صحيح',
                     'apply-to-shipping'                         => 'تطبيق على الشحن',
                     'attribute-family'                          => 'عائلة السمة',
-                    'attribute-name-children-only'              => 'اسم السمة (الأطفال فقط)',
-                    'attribute-name-parent-only'                => 'اسم السمة (الوالدين فقط)',
+                    'attribute-name-children-only'              => ':attribute_name (الأطفال فقط)',
+                    'attribute-name-parent-only'                => ':attribute_name (الوالدين فقط)',
                     'auto-generate-coupon'                      => 'توليد تلقائي للقسائم',
                     'back-btn'                                  => 'رجوع',
                     'buy-x-get-y-free'                          => 'اشتري X واحصل على Y مجانًا',
@@ -3712,7 +3714,7 @@ return [
                 'title' => 'عام',
 
                 'general' => [
-                    'info'  => 'تعيين خيارات الوحدات وتمكين أو تعطيل المسارات التفصيلية.',
+                    'info'  => 'تكوين إعدادات الوحدة وتبديل خيارات المسارات التفصيلية والزوار.',
                     'title' => 'عام',
 
                     'unit-options' => [
@@ -3726,6 +3728,12 @@ return [
                         'shop'       => 'تفعيل تنقل المسار في المتجر.',
                         'title'      => 'المسارات التفصيلية',
                         'title-info' => 'تمكين أو تعطيل تنقل المسارات التفصيلية في المتجر.',
+                    ],
+
+                    'visitor-options' => [
+                        'enable'     => 'تمكين خيارات الزوار',
+                        'title'      => 'خيارات الزوار',
+                        'title-info' => 'يسمح بالتحكم في الموقع لتتبع وحساب عدد الزيارات، مما يساعد في مراقبة نشاط وتفاعل الزوار بشكل عام.',
                     ],
                 ],
 
@@ -4893,6 +4901,16 @@ return [
                 'title'                    => 'مساعدة الذكاء الاصطناعي',
                 'vicuna-13b'               => 'Vicuna (13b)',
                 'vicuna-7b'                => 'Vicuna (7b)',
+            ],
+
+            'errors' => [
+                'file-extension-mismatch'        => 'امتداد الملف لا يتطابق مع نوع الملف.',
+                'file-upload-failed'             => 'فشل تحميل الملف.',
+                'http-error'                     => 'خطأ في HTTP.',
+                'invalid-file-type'              => 'نوع ملف غير صالح. الأنواع المسموحة: JPEG، PNG، GIF، WebP، SVG',
+                'invalid-json'                   => 'JSON غير صالح.',
+                'no-file-uploaded'               => 'لم يتم تحميل ملف.',
+                'upload-failed'                  => 'فشل تحميل الصورة بسبب خطأ في نقل XHR.',
             ],
         ],
     ],

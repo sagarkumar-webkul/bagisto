@@ -1952,6 +1952,8 @@ return [
         ],
 
         'groups' => [
+            'customer-associate' => 'این گروه دارای مشتریان مرتبط است و نمی‌توان آن را حذف کرد.',
+
             'index' => [
                 'title' => 'گروه‌ها',
 
@@ -2302,8 +2304,8 @@ return [
                     'any-conditions-true'                       => 'حداقل یکی از شرایط درست باشد',
                     'apply-to-shipping'                         => 'اعمال به هزینه ارسال',
                     'attribute-family'                          => 'خانواده ویژگی',
-                    'attribute-name-children-only'              => 'نام ویژگی فقط در دسته‌بندی‌های فرزند',
-                    'attribute-name-parent-only'                => 'نام ویژگی فقط در دسته‌بندی‌های والد',
+                    'attribute-name-children-only'              => ':attribute_name (فقط دسته‌های فرزند)',
+                    'attribute-name-parent-only'                => ':attribute_name (فقط دسته‌های والد)',
                     'auto-generate-coupon'                      => 'تولید خودکار کد تخفیف',
                     'back-btn'                                  => 'بازگشت',
                     'buy-x-get-y-free'                          => 'خرید X تا بگیرید Y رایگان',
@@ -2379,8 +2381,8 @@ return [
                     'any-conditions-true'                       => 'حداقل یکی از شرایط درست باشد',
                     'apply-to-shipping'                         => 'اعمال به هزینه ارسال',
                     'attribute-family'                          => 'خانواده ویژگی',
-                    'attribute-name-children-only'              => 'نام ویژگی فقط در دسته‌بندی‌های فرزند',
-                    'attribute-name-parent-only'                => 'نام ویژگی فقط در دسته‌بندی‌های والد',
+                    'attribute-name-children-only'              => ':attribute_name (فقط دسته‌های فرزند)',
+                    'attribute-name-parent-only'                => ':attribute_name (فقط دسته‌های والد)',
                     'auto-generate-coupon'                      => 'تولید خودکار کد تخفیف',
                     'back-btn'                                  => 'بازگشت',
                     'buy-x-get-y-free'                          => 'خرید X تا بگیرید Y رایگان',
@@ -3712,7 +3714,7 @@ return [
                 'title' => 'عمومی',
 
                 'general' => [
-                    'info'  => 'تنظیم گزینه‌های واحد و فعال یا غیرفعال کردن ناوبری خرده‌فروشی.',
+                    'info'  => 'تنظیم گزینه‌های واحد و فعال یا غیرفعال کردن گزینه‌های ناوبری خرده‌فروشی و بازدیدکننده.',
                     'title' => 'عمومی',
 
                     'unit-options' => [
@@ -3726,6 +3728,12 @@ return [
                         'shop'       => 'ناوبری خرده‌فروشی',
                         'title'      => 'ناوبری خرده‌فروشی',
                         'title-info' => 'فعال یا غیرفعال کردن ناوبری خرده‌فروشی در فروشگاه.',
+                    ],
+
+                    'visitor-options' => [
+                        'enable'     => 'فعال‌سازی گزینه‌های بازدیدکننده',
+                        'title'      => 'گزینه‌های بازدیدکننده',
+                        'title-info' => 'امکان کنترل سایت برای ردیابی و شمارش تعداد بازدیدها را فراهم می‌کند و به پایش فعالیت کلی بازدیدکنندگان و میزان تعامل کمک می‌کند.',
                     ],
                 ],
 
@@ -4893,6 +4901,16 @@ return [
                 'title'                    => 'کمک هوش مصنوعی',
                 'vicuna-13b'               => 'Vicuna (13b)',
                 'vicuna-7b'                => 'Vicuna (7b)',
+            ],
+
+            'errors' => [
+                'file-extension-mismatch'        => 'پسوند فایل با نوع فایل مطابقت ندارد.',
+                'file-upload-failed'             => 'بارگذاری فایل ناموفق بود.',
+                'http-error'                     => 'خطای HTTP.',
+                'invalid-file-type'              => 'نوع فایل نامعتبر است. انواع مجاز: JPEG، PNG، GIF، WebP، SVG',
+                'invalid-json'                   => 'JSON نامعتبر.',
+                'no-file-uploaded'               => 'هیچ فایلی بارگذاری نشد.',
+                'upload-failed'                  => 'بارگذاری تصویر به دلیل خطای انتقال XHR ناموفق بود.',
             ],
         ],
     ],

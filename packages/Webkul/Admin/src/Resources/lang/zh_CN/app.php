@@ -1952,6 +1952,8 @@ return [
         ],
 
         'groups' => [
+            'customer-associate' => '此组有关联的客户，无法删除。',
+
             'index' => [
                 'title' => '分组',
 
@@ -2302,8 +2304,8 @@ return [
                     'any-conditions-true'                       => '任意条件为真',
                     'apply-to-shipping'                         => '应用于运费',
                     'attribute-family'                          => '属性系列',
-                    'attribute-name-children-only'              => '仅限子类别的属性名称',
-                    'attribute-name-parent-only'                => '仅限父类别的属性名称',
+                    'attribute-name-children-only'              => ':attribute_name (仅限子类别)',
+                    'attribute-name-parent-only'                => ':attribute_name (仅限父类别)',
                     'auto-generate-coupon'                      => '自动生成优惠券',
                     'back-btn'                                  => '返回',
                     'buy-x-get-y-free'                          => '买 X 送 Y',
@@ -2379,8 +2381,8 @@ return [
                     'any-conditions-true'                       => '任意条件为真',
                     'apply-to-shipping'                         => '应用于运费',
                     'attribute-family'                          => '属性系列',
-                    'attribute-name-children-only'              => '仅限子类别的属性名称',
-                    'attribute-name-parent-only'                => '仅限父类别的属性名称',
+                    'attribute-name-children-only'              => ':attribute_name (仅限子类别)',
+                    'attribute-name-parent-only'                => ':attribute_name (仅限父类别)',
                     'auto-generate-coupon'                      => '自动生成优惠券',
                     'back-btn'                                  => '返回',
                     'buy-x-get-y-free'                          => '买 X 送 Y',
@@ -3712,7 +3714,7 @@ return [
                 'title' => '常规',
 
                 'general' => [
-                    'info'  => '设置单位选项并启用或禁用面包屑导航。',
+                    'info'  => '配置单位设置，并可启用或禁用面包屑和访客选项。',
                     'title' => '常规',
 
                     'unit-options' => [
@@ -3726,6 +3728,12 @@ return [
                         'shop'       => '商店面包屑',
                         'title'      => '面包屑',
                         'title-info' => '在商店中启用或禁用面包屑导航。',
+                    ],
+
+                    'visitor-options' => [
+                        'enable'     => '启用访客选项',
+                        'title'      => '访客选项',
+                        'title-info' => '允许控制站点以跟踪和统计访问次数，有助于监控一般访客活动和参与度。',
                     ],
                 ],
 
@@ -4893,6 +4901,16 @@ return [
                 'title'                  => 'AI 辅助',
                 'vicuna-13b'             => 'Vicuna (13b)',
                 'vicuna-7b'              => 'Vicuna (7b)',
+            ],
+
+            'errors' => [
+                'file-extension-mismatch'        => '文件扩展名与文件类型不匹配。',
+                'file-upload-failed'             => '文件上传失败。',
+                'http-error'                     => 'HTTP错误。',
+                'invalid-file-type'              => '无效的文件类型。允许的类型：JPEG、PNG、GIF、WebP、SVG',
+                'invalid-json'                   => '无效的JSON。',
+                'no-file-uploaded'               => '未上传文件。',
+                'upload-failed'                  => '由于XHR传输错误，图片上传失败。',
             ],
         ],
     ],

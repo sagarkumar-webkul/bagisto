@@ -1952,6 +1952,8 @@ return [
         ],
 
         'groups' => [
+            'customer-associate' => 'Ця група має пов\'язаних клієнтів і не може бути видалена.',
+
             'index' => [
                 'title' => 'Групи',
 
@@ -2302,8 +2304,8 @@ return [
                     'any-conditions-true'                       => 'Будь-яка Умова Вірна',
                     'apply-to-shipping'                         => 'Застосувати до Доставки',
                     'attribute-family'                          => 'Сімейство Атрибутів',
-                    'attribute-name-children-only'              => 'Назва Атрибуту (Тільки Діти)',
-                    'attribute-name-parent-only'                => 'Назва Атрибуту (Тільки Батьки)',
+                    'attribute-name-children-only'              => ':attribute_name (Тільки Діти)',
+                    'attribute-name-parent-only'                => ':attribute_name (Тільки Батьки)',
                     'auto-generate-coupon'                      => 'Автоматично Генерувати Промокод',
                     'back-btn'                                  => 'Назад',
                     'buy-x-get-y-free'                          => 'Купи X Отримай Y За Безкоштовно',
@@ -2379,8 +2381,8 @@ return [
                     'any-conditions-true'                       => 'Будь-яка Умова Вірна',
                     'apply-to-shipping'                         => 'Застосувати до Доставки',
                     'attribute-family'                          => 'Сімейство Атрибутів',
-                    'attribute-name-children-only'              => 'Назва Атрибуту (Тільки Діти)',
-                    'attribute-name-parent-only'                => 'Назва Атрибуту (Тільки Батьки)',
+                    'attribute-name-children-only'              => ':attribute_name (Тільки Діти)',
+                    'attribute-name-parent-only'                => ':attribute_name (Тільки Батьки)',
                     'auto-generate-coupon'                      => 'Автоматично Генерувати Промокод',
                     'back-btn'                                  => 'Назад',
                     'buy-x-get-y-free'                          => 'Купи X Отримай Y За Безкоштовно',
@@ -3712,20 +3714,26 @@ return [
                 'title' => 'Загальне',
 
                 'general' => [
-                    'info'  => 'Встановіть параметри одиниць та увімкніть або вимкніть хлібні крихти.',
+                    'info'  => 'Налаштуйте параметри одиниць та перемикайте опції хлібних крихт і відвідувачів.',
                     'title' => 'Загальне',
 
                     'unit-options' => [
                         'info'        => 'Встановіть параметри одиниць.',
                         'title'       => 'Параметри одиниць',
-                        'title-info'  => 'Налаштуйте вагу в фунтах (lbs) або кілограмах (kgs).',
+                        'title-info'  => 'Налаштуйте вагу у фунтах (lbs) або кілограмах (kgs).',
                         'weight-unit' => 'Одиниця ваги',
                     ],
 
                     'breadcrumbs' => [
                         'shop'       => 'Хлібні крихти магазину',
                         'title'      => 'Хлібні крихти',
-                        'title-info' => 'Увімкніть або вимкніть навігацію хлібних крихт в магазині.',
+                        'title-info' => 'Увімкніть або вимкніть навігацію хлібних крихт у магазині.',
+                    ],
+
+                    'visitor-options' => [
+                        'enable'     => 'Увімкнути опції відвідувачів',
+                        'title'      => 'Опції відвідувачів',
+                        'title-info' => 'Дозволяє контролювати сайт для відстеження та підрахунку кількості відвідувань, допомагаючи моніторити загальну активність і залученість відвідувачів.',
                     ],
                 ],
 
@@ -4893,6 +4901,16 @@ return [
                 'title'                  => 'Допомога ШІ',
                 'vicuna-13b'             => 'Vicuna (13b)',
                 'vicuna-7b'              => 'Vicuna (7b)',
+            ],
+
+            'errors' => [
+                'file-extension-mismatch'        => 'Розширення файлу не відповідає типу файлу.',
+                'file-upload-failed'             => 'Не вдалося завантажити файл.',
+                'http-error'                     => 'Помилка HTTP.',
+                'invalid-file-type'              => 'Недійсний тип файлу. Дозволені типи: JPEG, PNG, GIF, WebP, SVG',
+                'invalid-json'                   => 'Недійсний JSON.',
+                'no-file-uploaded'               => 'Файл не завантажено.',
+                'upload-failed'                  => 'Не вдалося завантажити зображення через помилку передачі XHR.',
             ],
         ],
     ],

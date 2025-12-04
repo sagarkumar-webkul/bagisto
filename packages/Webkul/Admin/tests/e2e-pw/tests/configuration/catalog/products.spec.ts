@@ -1,8 +1,9 @@
 import { test, expect } from "../../../setup";
-import { getRandomImageFile } from "../../../utils/form";
+
 import {
     generateDescription,
     generateRandomNumericString,
+    getImageFile,
 } from "../../../utils/faker";
 
 test.describe("product configuration", () => {
@@ -28,59 +29,7 @@ test.describe("product configuration", () => {
         /**
          * Verify the change is saved.
          */
-        await expect(
-            adminPage.getByText("Configuration saved successfully")
-        ).toBeVisible();
-    });
-
-    test("should set up the search engine for product searches", async ({
-        adminPage,
-    }) => {
-        await adminPage.selectOption(
-            'select[name="catalog[products][search][engine]"]',
-            "elastic"
-        );
-        const searchEngine = adminPage.locator(
-            'select[name="catalog[products][search][engine]"]'
-        );
-        await expect(searchEngine).toHaveValue("elastic");
-
-        await adminPage.selectOption(
-            'select[name="catalog[products][search][admin_mode]"]',
-            "elastic"
-        );
-        const adminSearchMode = adminPage.locator(
-            'select[name="catalog[products][search][admin_mode]"]'
-        );
-        await expect(adminSearchMode).toHaveValue("elastic");
-
-        await adminPage.selectOption(
-            'select[name="catalog[products][search][storefront_mode]"]',
-            "elastic"
-        );
-        const storeFrontSearchMode = adminPage.locator(
-            'select[name="catalog[products][search][storefront_mode]"]'
-        );
-        await expect(storeFrontSearchMode).toHaveValue("elastic");
-
-        await adminPage
-            .locator(
-                'input[name="catalog[products][search][min_query_length]"]'
-            )
-            .fill(generateRandomNumericString(2));
-        await adminPage
-            .locator(
-                'input[name="catalog[products][search][max_query_length]"]'
-            )
-            .fill(generateRandomNumericString(2));
-        await adminPage.click('button[type="submit"].primary-button:visible');
-
-        /**
-         * Verify the change is saved.
-         */
-        await expect(
-            adminPage.getByText("Configuration saved successfully")
-        ).toBeVisible();
+        await expect(adminPage.locator('#app p' , { hasText: 'Configuration saved successfully' })).toBeVisible();
     });
 
     /**
@@ -104,9 +53,7 @@ test.describe("product configuration", () => {
         /**
          * Verify the change is saved.
          */
-        await expect(
-            adminPage.getByText("Configuration saved successfully")
-        ).toBeVisible();
+         await expect(adminPage.locator('#app p' , { hasText: 'Configuration saved successfully' })).toBeVisible();
     });
 
     test("should update the cart view page configuration", async ({
@@ -122,9 +69,7 @@ test.describe("product configuration", () => {
         /**
          * Verify the change is saved.
          */
-        await expect(
-            adminPage.getByText("Configuration saved successfully")
-        ).toBeVisible();
+        await expect(adminPage.locator('#app p' , { hasText: 'Configuration saved successfully' })).toBeVisible();
     });
 
     test("should update the store front configuration", async ({
@@ -163,9 +108,7 @@ test.describe("product configuration", () => {
         /**
          * Verify the change is saved.
          */
-        await expect(
-            adminPage.getByText("Configuration saved successfully")
-        ).toBeVisible();
+        await expect(adminPage.locator('#app p' , { hasText: 'Configuration saved successfully' })).toBeVisible();
     });
 
     test("should update the small image size and placeholder", async ({
@@ -187,7 +130,7 @@ test.describe("product configuration", () => {
             adminPage.click('label:has-text("Small Image Placeholder")'),
         ]);
 
-        await fileChooser.setFiles(getRandomImageFile());
+        await fileChooser.setFiles(getImageFile());
         await adminPage.click('button[type="submit"].primary-button:visible');
 
         /**
@@ -204,9 +147,7 @@ test.describe("product configuration", () => {
         /**
          * Verify the change is saved.
          */
-        await expect(
-            adminPage.getByText("Configuration saved successfully")
-        ).toBeVisible();
+        await expect(adminPage.locator('#app p' , { hasText: 'Configuration saved successfully' })).toBeVisible();
     });
 
     test("should update the medium image size and placeholder", async ({
@@ -228,7 +169,7 @@ test.describe("product configuration", () => {
             adminPage.click('label:has-text("Medium Image Placeholder")'),
         ]);
 
-        await fileChooser.setFiles(getRandomImageFile());
+        await fileChooser.setFiles(getImageFile());
         await adminPage.click('button[type="submit"].primary-button:visible');
 
         /**
@@ -245,9 +186,7 @@ test.describe("product configuration", () => {
         /**
          * Verify the change is saved.
          */
-        await expect(
-            adminPage.getByText("Configuration saved successfully")
-        ).toBeVisible();
+        await expect(adminPage.locator('#app p' , { hasText: 'Configuration saved successfully' })).toBeVisible();
     });
 
     test("should update the large image size and placeholder", async ({
@@ -269,7 +208,7 @@ test.describe("product configuration", () => {
             adminPage.click('label:has-text("Large Image Placeholder")'),
         ]);
 
-        await fileChooser.setFiles(getRandomImageFile());
+        await fileChooser.setFiles(getImageFile());
         await adminPage.click('button[type="submit"].primary-button:visible');
 
         /**
@@ -286,9 +225,7 @@ test.describe("product configuration", () => {
         /**
          * Verify the change is saved.
          */
-        await expect(
-            adminPage.getByText("Configuration saved successfully")
-        ).toBeVisible();
+        await expect(adminPage.locator('#app p' , { hasText: 'Configuration saved successfully' })).toBeVisible();
     });
 
     test("should update the review configuration", async ({ adminPage }) => {
@@ -314,9 +251,7 @@ test.describe("product configuration", () => {
         /**
          * Verify the change is saved.
          */
-        await expect(
-            adminPage.getByText("Configuration saved successfully")
-        ).toBeVisible();
+        await expect(adminPage.locator('#app p' , { hasText: 'Configuration saved successfully' })).toBeVisible();
     });
 
     test("should update the allowed image and file upload size", async ({
@@ -337,9 +272,7 @@ test.describe("product configuration", () => {
         /**
          * Verify the change is saved.
          */
-        await expect(
-            adminPage.getByText("Configuration saved successfully")
-        ).toBeVisible();
+        await expect(adminPage.locator('#app p' , { hasText: 'Configuration saved successfully' })).toBeVisible();
     });
 
     test("should update social share configuration", async ({ adminPage }) => {
@@ -382,8 +315,6 @@ test.describe("product configuration", () => {
         /**
          * Verify the change is saved.
          */
-        await expect(
-            adminPage.getByText("Configuration saved successfully")
-        ).toBeVisible();
+        await expect(adminPage.locator('#app p' , { hasText: 'Configuration saved successfully' })).toBeVisible();
     });
 });

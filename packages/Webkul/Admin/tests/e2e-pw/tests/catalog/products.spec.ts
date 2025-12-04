@@ -65,7 +65,6 @@ async function createSimpleProduct(adminPage) {
     await adminPage.locator("#product_number").fill(product.productNumber);
     await adminPage.locator("#name").fill(product.name);
     const name = await adminPage.locator('input[name="name"]').inputValue();
-    console.log(name);
 
     /**
      * Description Section.
@@ -108,9 +107,9 @@ async function createSimpleProduct(adminPage) {
      * Categories Section.
      */
     await adminPage
-        .locator("label")
-        .filter({ hasText: "Men" })
-        .locator("span")
+        .locator("label", { hasText: /^Men$/ })
+        .locator("span.icon-uncheckbox")
+        .first()
         .click();
 
     /**
@@ -559,9 +558,9 @@ async function createVirtualProduct(adminPage) {
      * Categories Section.
      */
     await adminPage
-        .locator("label")
-        .filter({ hasText: "Men" })
-        .locator("span")
+        .locator("label", { hasText: /^Men$/ })
+        .locator("span.icon-uncheckbox")
+        .first()
         .click();
 
     /**
@@ -928,6 +927,7 @@ test.describe("simple product management", () => {
             adminPage.getByText("Selected Products Updated Successfully")
         ).toBeVisible();
     });
+
     test("should mass delete the products", async ({ adminPage }) => {
         await adminPage.goto("admin/catalog/products");
         await adminPage.waitForSelector(
@@ -1127,6 +1127,7 @@ test.describe("grouped product management", () => {
     test("should create a grouped product", async ({ adminPage }) => {
         await createGroupedProduct(adminPage);
     });
+
     test("should edit a grouped product", async ({ adminPage }) => {
         /**
          * Reaching to the edit product page.
@@ -1182,6 +1183,7 @@ test.describe("grouped product management", () => {
             "Product updated successfully"
         );
     });
+
     test("should mass update the products", async ({ adminPage }) => {
         await adminPage.goto("admin/catalog/products");
         await adminPage.waitForSelector(
@@ -1225,6 +1227,7 @@ test.describe("grouped product management", () => {
             adminPage.getByText("Selected Products Updated Successfully")
         ).toBeVisible();
     });
+
     test("should mass delete the products", async ({ adminPage }) => {
         await adminPage.goto("admin/catalog/products");
         await adminPage.waitForSelector(
@@ -1321,6 +1324,7 @@ test.describe("virtual product management", () => {
             "Product updated successfully"
         );
     });
+
     test("should mass update the products", async ({ adminPage }) => {
         await adminPage.goto("admin/catalog/products");
         await adminPage.waitForSelector(
@@ -1411,6 +1415,7 @@ test.describe("downloadable product management", () => {
     test("should create a downloadable product", async ({ adminPage }) => {
         await createDownloadableProduct(adminPage);
     });
+
     test("should edit a downloadable product", async ({ adminPage }) => {
         /**
          * Reaching to the edit product page.
@@ -1465,6 +1470,7 @@ test.describe("downloadable product management", () => {
             "Product updated successfully"
         );
     });
+
     test("should mass update the products", async ({ adminPage }) => {
         await adminPage.goto("admin/catalog/products");
         await adminPage.waitForSelector(
@@ -1508,6 +1514,7 @@ test.describe("downloadable product management", () => {
             adminPage.getByText("Selected Products Updated Successfully")
         ).toBeVisible();
     });
+    
     test("should mass delete the products", async ({ adminPage }) => {
         await adminPage.goto("admin/catalog/products");
         await adminPage.waitForSelector(

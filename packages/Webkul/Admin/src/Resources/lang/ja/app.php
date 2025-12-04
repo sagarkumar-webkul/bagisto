@@ -1952,6 +1952,8 @@ return [
         ],
 
         'groups' => [
+            'customer-associate' => 'このグループには関連する顧客がいるため、削除できません。',
+
             'index' => [
                 'title' => 'グループ',
 
@@ -2302,8 +2304,8 @@ return [
                     'any-conditions-true'                       => 'いずれかの条件が真である',
                     'apply-to-shipping'                         => '配送に適用',
                     'attribute-family'                          => '属性ファミリー',
-                    'attribute-name-children-only'              => '属性名（子カテゴリのみ）',
-                    'attribute-name-parent-only'                => '属性名（親カテゴリのみ）',
+                    'attribute-name-children-only'              => ':attribute_name（子カテゴリのみ）',
+                    'attribute-name-parent-only'                => ':attribute_name（親カテゴリのみ）',
                     'auto-generate-coupon'                      => 'クーポンを自動生成',
                     'back-btn'                                  => '戻る',
                     'buy-x-get-y-free'                          => 'X個買うとY個無料',
@@ -2379,8 +2381,8 @@ return [
                     'any-conditions-true'                       => 'いずれかの条件が真である',
                     'apply-to-shipping'                         => '配送に適用',
                     'attribute-family'                          => '属性ファミリー',
-                    'attribute-name-children-only'              => '属性名（子カテゴリのみ）',
-                    'attribute-name-parent-only'                => '属性名（親カテゴリのみ）',
+                    'attribute-name-children-only'              => ':attribute_name（子カテゴリのみ）',
+                    'attribute-name-parent-only'                => ':attribute_name（親カテゴリのみ）',
                     'auto-generate-coupon'                      => 'クーポンを自動生成',
                     'back-btn'                                  => '戻る',
                     'buy-x-get-y-free'                          => 'X個買うとY個無料',
@@ -3712,7 +3714,7 @@ return [
                 'title' => '一般',
 
                 'general' => [
-                    'info'  => 'ユニットオプションを設定し、パンくずリストを有効または無効にします。',
+                    'info'  => 'ユニット設定を構成し、パンくずリストと訪問者オプションのオン/オフを切り替えます。',
                     'title' => '一般',
 
                     'unit-options' => [
@@ -3726,6 +3728,12 @@ return [
                         'shop'       => 'ショップのパンくずリスト',
                         'title'      => 'パンくずリスト',
                         'title-info' => 'ショップでのパンくずリストのナビゲーションを有効または無効にします。',
+                    ],
+
+                    'visitor-options' => [
+                        'enable'     => '訪問者オプションを有効にする',
+                        'title'      => '訪問者オプション',
+                        'title-info' => 'サイトの訪問数を追跡・カウントすることで、一般的な訪問者の活動やエンゲージメントを監視できます。',
                     ],
                 ],
 
@@ -4893,6 +4901,16 @@ return [
                 'title'                    => 'AIアシスタント',
                 'vicuna-13b'               => 'Vicuna (13b)',
                 'vicuna-7b'                => 'Vicuna (7b)',
+            ],
+
+            'errors' => [
+                'file-extension-mismatch'        => 'ファイル拡張子がファイルタイプと一致しません。',
+                'file-upload-failed'             => 'ファイルのアップロードに失敗しました。',
+                'http-error'                     => 'HTTPエラー。',
+                'invalid-file-type'              => '無効なファイルタイプです。許可されるタイプ: JPEG, PNG, GIF, WebP, SVG',
+                'invalid-json'                   => '無効なJSON。',
+                'no-file-uploaded'               => 'ファイルがアップロードされていません。',
+                'upload-failed'                  => 'XHRトランスポートエラーにより画像のアップロードに失敗しました。',
             ],
         ],
     ],

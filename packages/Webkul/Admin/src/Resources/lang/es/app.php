@@ -1952,6 +1952,8 @@ return [
         ],
 
         'groups' => [
+            'customer-associate' => 'Este grupo tiene clientes asociados y no se puede eliminar.',
+
             'index' => [
                 'title' => 'Grupos',
 
@@ -2302,8 +2304,8 @@ return [
                     'any-conditions-true'                       => 'Cualquier Condición Es Verdadera',
                     'apply-to-shipping'                         => 'Aplicar al Envío',
                     'attribute-family'                          => 'Familia de Atributos',
-                    'attribute-name-children-only'              => 'Nombre del Atributo Solo para Hijos',
-                    'attribute-name-parent-only'                => 'Nombre del Atributo Solo para Padres',
+                    'attribute-name-children-only'              => ':attribute_name (Solo Hijos)',
+                    'attribute-name-parent-only'                => ':attribute_name (Solo Padres)',
                     'auto-generate-coupon'                      => 'Generación Automática de Cupón',
                     'back-btn'                                  => 'Volver',
                     'buy-x-get-y-free'                          => 'Comprar X y Obtener Y Gratis',
@@ -2379,8 +2381,8 @@ return [
                     'any-conditions-true'                       => 'Cualquier Condición Es Verdadera',
                     'apply-to-shipping'                         => 'Aplicar al Envío',
                     'attribute-family'                          => 'Familia de Atributos',
-                    'attribute-name-children-only'              => 'Nombre del Atributo Solo para Hijos',
-                    'attribute-name-parent-only'                => 'Nombre del Atributo Solo para Padres',
+                    'attribute-name-children-only'              => ':attribute_name (Solo Hijos)',
+                    'attribute-name-parent-only'                => ':attribute_name (Solo Padres)',
                     'auto-generate-coupon'                      => 'Generación Automática de Cupón',
                     'back-btn'                                  => 'Volver',
                     'buy-x-get-y-free'                          => 'Comprar X y Obtener Y Gratis',
@@ -3712,20 +3714,26 @@ return [
                 'title' => 'General',
 
                 'general' => [
-                    'info'  => 'Establecer opciones de unidades y habilitar o deshabilitar las migas de pan.',
+                    'info'  => 'Configura las opciones de unidades y activa o desactiva las opciones de Migas de Pan y Visitantes.',
                     'title' => 'General',
 
                     'unit-options' => [
                         'info'        => 'Establecer opciones de unidades.',
                         'title'       => 'Opciones de Unidades',
-                        'title-info'  => 'Configure el peso en libras (lbs) o kilogramos (kgs).',
+                        'title-info'  => 'Configura el peso en libras (lbs) o kilogramos (kgs).',
                         'weight-unit' => 'Unidad de Peso',
                     ],
 
                     'breadcrumbs' => [
-                        'shop'       => 'Migas de Pan de la Tienda',
-                        'title'      => 'Migas de Pan',
-                        'title-info' => 'Habilitar o deshabilitar la navegación de migas de pan en la tienda.',
+                        'shop'       => 'Migas de pan de la tienda',
+                        'title'      => 'Migas de pan',
+                        'title-info' => 'Habilita o deshabilita la navegación de migas de pan en la tienda.',
+                    ],
+
+                    'visitor-options' => [
+                        'enable'     => 'Habilitar opciones de visitantes',
+                        'title'      => 'Opciones de visitantes',
+                        'title-info' => 'Permite controlar el sitio para rastrear y contar el número de visitas, ayudando a monitorear la actividad y el compromiso general de los visitantes.',
                     ],
                 ],
 
@@ -4893,6 +4901,16 @@ return [
                 'title'                    => 'Asistencia de IA',
                 'vicuna-13b'               => 'Vicuna (13b)',
                 'vicuna-7b'                => 'Vicuna (7b)',
+            ],
+
+            'errors' => [
+                'file-extension-mismatch'        => 'La extensión del archivo no coincide con el tipo de archivo.',
+                'file-upload-failed'             => 'Falló la carga del archivo.',
+                'http-error'                     => 'Error HTTP.',
+                'invalid-file-type'              => 'Tipo de archivo no válido. Tipos permitidos: JPEG, PNG, GIF, WebP, SVG',
+                'invalid-json'                   => 'JSON no válido.',
+                'no-file-uploaded'               => 'No se cargó ningún archivo.',
+                'upload-failed'                  => 'La carga de la imagen falló debido a un error de transporte XHR.',
             ],
         ],
     ],

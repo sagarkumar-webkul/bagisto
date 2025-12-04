@@ -1298,7 +1298,7 @@ return [
                         'validations' => [
                             'type-mismatch'      => 'Le type de réservation ne peut pas être modifié.',
                             'time-validation'    => "L'heure de début doit être inférieure à l'heure de fin.",
-                            'overlap-validation' => "Le créneau horaire chevauche un créneau existant.",
+                            'overlap-validation' => 'Le créneau horaire chevauche un créneau existant.',
                         ],
                     ],
 
@@ -1952,6 +1952,8 @@ return [
         ],
 
         'groups' => [
+            'customer-associate' => 'Ce groupe a des clients associés et ne peut pas être supprimé.',
+
             'index' => [
                 'title' => 'Groupes',
 
@@ -2301,9 +2303,9 @@ return [
                     'all-conditions-true'                       => 'Toutes les conditions sont vraies',
                     'any-conditions-true'                       => 'Toutes les conditions sont vraies',
                     'apply-to-shipping'                         => 'Appliquer aux frais d\'expédition',
-                    'attribute-family'                          => 'Famille d’attributs',
-                    'attribute-name-children-only'              => 'Nom de l’attribut Enfants Uniquement',
-                    'attribute-name-parent-only'                => 'Nom de l’attribut Parent Uniquement',
+                    'attribute-family'                          => 'Famille d\'attributs',
+                    'attribute-name-children-only'              => ':attribute_name (enfants uniquement)',
+                    'attribute-name-parent-only'                => ':attribute_name (parents uniquement)',
                     'auto-generate-coupon'                      => 'Générer automatiquement le coupon',
                     'back-btn'                                  => 'Retour',
                     'buy-x-get-y-free'                          => 'Achetez X, obtenez Y gratuitement',
@@ -2379,8 +2381,8 @@ return [
                     'any-conditions-true'                       => 'Une ou plusieurs conditions sont vraies',
                     'apply-to-shipping'                         => 'Appliquer aux frais de livraison',
                     'attribute-family'                          => 'Famille d\'attributs',
-                    'attribute-name-children-only'              => 'Nom de l\'attribut (enfants uniquement)',
-                    'attribute-name-parent-only'                => 'Nom de l\'attribut (parents uniquement)',
+                    'attribute-name-children-only'              => ':attribute_name (enfants uniquement)',
+                    'attribute-name-parent-only'                => ':attribute_name (parents uniquement)',
                     'auto-generate-coupon'                      => 'Générer automatiquement le coupon',
                     'back-btn'                                  => 'Retour',
                     'buy-x-get-y-free'                          => 'Achetez X, obtenez Y gratuitement',
@@ -3712,7 +3714,7 @@ return [
                 'title' => 'Général',
 
                 'general' => [
-                    'info'  => 'Définir les options d\'unités et activer ou désactiver les fils d\'Ariane.',
+                    'info'  => 'Configurer les paramètres d\'unités et activer ou désactiver les options Fil d\'Ariane et Visiteur.',
                     'title' => 'Général',
 
                     'unit-options' => [
@@ -3726,6 +3728,12 @@ return [
                         'shop'       => 'Fil d\'Ariane de la boutique',
                         'title'      => 'Fil d\'Ariane',
                         'title-info' => 'Activer ou désactiver la navigation par fil d\'Ariane dans la boutique.',
+                    ],
+
+                    'visitor-options' => [
+                        'enable'     => 'Activer les options de visiteur',
+                        'title'      => 'Options de visiteur',
+                        'title-info' => 'Permet de contrôler le site pour suivre et compter le nombre de visites, aidant à surveiller l\'activité générale et l\'engagement des visiteurs.',
                     ],
                 ],
 
@@ -4893,6 +4901,16 @@ return [
                 'title'                    => 'Assistance IA',
                 'vicuna-13b'               => 'Vicuna (13b)',
                 'vicuna-7b'                => 'Vicuna (7b)',
+            ],
+
+            'errors' => [
+                'file-extension-mismatch'        => 'L\'extension du fichier ne correspond pas au type de fichier.',
+                'file-upload-failed'             => 'Échec du téléchargement du fichier.',
+                'http-error'                     => 'Erreur HTTP.',
+                'invalid-file-type'              => 'Type de fichier non valide. Types autorisés : JPEG, PNG, GIF, WebP, SVG',
+                'invalid-json'                   => 'JSON non valide.',
+                'no-file-uploaded'               => 'Aucun fichier téléchargé.',
+                'upload-failed'                  => 'Le téléchargement de l\'image a échoué en raison d\'une erreur de transport XHR.',
             ],
         ],
     ],

@@ -1298,7 +1298,7 @@ return [
                         'validations' => [
                             'type-mismatch'      => 'El tipus de reserva no es pot canviar.',
                             'time-validation'    => "L'hora d'inici ha de ser menor que l'hora de finalització.",
-                            'overlap-validation' => "La franja horària se solapa amb una franja existent.",
+                            'overlap-validation' => 'La franja horària se solapa amb una franja existent.',
                         ],
                     ],
 
@@ -1952,6 +1952,8 @@ return [
         ],
 
         'groups' => [
+            'customer-associate' => 'Aquest grup té clients associats i no es pot eliminar.',
+
             'index' => [
                 'title' => 'Grups',
 
@@ -2302,8 +2304,8 @@ return [
                     'any-conditions-true'                       => 'Qualsevol Condició És Vertadera',
                     'apply-to-shipping'                         => 'Aplicar a l\'Enviament',
                     'attribute-family'                          => 'Família d\'Atributs',
-                    'attribute-name-children-only'              => 'Nom de l\'Atribut Només per a Fills',
-                    'attribute-name-parent-only'                => 'Nom de l\'Atribut Només per a Pares',
+                    'attribute-name-children-only'              => ':attribute_name (Només Fills)',
+                    'attribute-name-parent-only'                => ':attribute_name (Només Pares)',
                     'auto-generate-coupon'                      => 'Generació Automàtica de Cupó',
                     'back-btn'                                  => 'Tornar',
                     'buy-x-get-y-free'                          => 'Comprar X i Obtenir Y Gratis',
@@ -2379,8 +2381,8 @@ return [
                     'any-conditions-true'                       => 'Qualsevol Condició És Vertadera',
                     'apply-to-shipping'                         => 'Aplicar a l\'Enviament',
                     'attribute-family'                          => 'Família d\'Atributs',
-                    'attribute-name-children-only'              => 'Nom de l\'Atribut Només per a Fills',
-                    'attribute-name-parent-only'                => 'Nom de l\'Atribut Només per a Pares',
+                    'attribute-name-children-only'              => ':attribute_name (Només Fills)',
+                    'attribute-name-parent-only'                => ':attribute_name (Només Pares)',
                     'auto-generate-coupon'                      => 'Generació Automàtica de Cupó',
                     'back-btn'                                  => 'Tornar',
                     'buy-x-get-y-free'                          => 'Comprar X i Obtenir Y Gratis',
@@ -3711,7 +3713,7 @@ return [
                 'title' => 'General',
 
                 'general' => [
-                    'info'  => 'Estableix opcions d\'unitats.',
+                    'info'  => 'Configura les opcions d\'unitats i activa o desactiva les opcions de Molles de Pa i Visitants.',
                     'title' => 'General',
 
                     'unit-options' => [
@@ -3722,9 +3724,15 @@ return [
                     ],
 
                     'breadcrumbs' => [
-                        'shop'       => 'Molles de Pa de la Botiga',
-                        'title'      => 'Molles de Pa',
+                        'shop'       => 'Molles de pa de la botiga',
+                        'title'      => 'Molles de pa',
                         'title-info' => 'Habilita o deshabilita la navegació de molles de pa a la botiga.',
+                    ],
+
+                    'visitor-options' => [
+                        'enable'     => 'Habilitar opcions de visitant',
+                        'title'      => 'Opcions de visitant',
+                        'title-info' => 'Permet controlar el lloc per fer el seguiment i comptar el nombre de visites, ajudant a monitorar l\'activitat i el compromís general dels visitants.',
                     ],
                 ],
 
@@ -4892,6 +4900,16 @@ return [
                 'title'                    => 'Assistència IA',
                 'vicuna-13b'               => 'Vicuna (13b)',
                 'vicuna-7b'                => 'Vicuna (7b)',
+            ],
+
+            'errors' => [
+                'file-extension-mismatch'        => 'L\'extensió del fitxer no coincideix amb el tipus de fitxer.',
+                'file-upload-failed'             => 'Ha fallat la càrrega del fitxer.',
+                'http-error'                     => 'Error HTTP.',
+                'invalid-file-type'              => 'Tipus de fitxer no vàlid. Tipus permesos: JPEG, PNG, GIF, WebP, SVG',
+                'invalid-json'                   => 'JSON no vàlid.',
+                'no-file-uploaded'               => 'No s\'ha carregat cap fitxer.',
+                'upload-failed'                  => 'La càrrega de la imatge ha fallat a causa d\'un error de transport XHR.',
             ],
         ],
     ],

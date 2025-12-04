@@ -1952,6 +1952,8 @@ return [
         ],
 
         'groups' => [
+            'customer-associate' => 'Grup ini memiliki pelanggan terkait dan tidak dapat dihapus.',
+
             'index' => [
                 'title' => 'Grup',
 
@@ -2302,8 +2304,8 @@ return [
                     'any-conditions-true'                       => 'Salah Satu Kondisi Terpenuhi',
                     'apply-to-shipping'                         => 'Terapkan ke Pengiriman',
                     'attribute-family'                          => 'Kelompok Atribut',
-                    'attribute-name-children-only'              => 'Nama Atribut (Hanya Anak)',
-                    'attribute-name-parent-only'                => 'Nama Atribut (Hanya Induk)',
+                    'attribute-name-children-only'              => ':attribute_name (Hanya Anak)',
+                    'attribute-name-parent-only'                => ':attribute_name (Hanya Induk)',
                     'auto-generate-coupon'                      => 'Buat Kupon Secara Otomatis',
                     'back-btn'                                  => 'Kembali',
                     'buy-x-get-y-free'                          => 'Beli X Gratis Y',
@@ -2379,8 +2381,8 @@ return [
                     'any-conditions-true'                       => 'Salah Satu Kondisi Bernilai Benar',
                     'apply-to-shipping'                         => 'Terapkan pada Pengiriman',
                     'attribute-family'                          => 'Keluarga Atribut',
-                    'attribute-name-children-only'              => 'Nama Atribut (hanya turunan)',
-                    'attribute-name-parent-only'                => 'Nama Atribut (hanya induk)',
+                    'attribute-name-children-only'              => ':attribute_name (hanya turunan)',
+                    'attribute-name-parent-only'                => ':attribute_name (hanya induk)',
                     'auto-generate-coupon'                      => 'Buat Kupon Otomatis',
                     'back-btn'                                  => 'Kembali',
                     'buy-x-get-y-free'                          => 'Beli X Dapat Y Gratis',
@@ -3712,7 +3714,7 @@ return [
                 'title' => 'Umum',
 
                 'general' => [
-                    'info'  => 'Atur opsi unit dan aktifkan atau nonaktifkan breadcrumb.',
+                    'info'  => 'Atur pengaturan unit dan aktifkan/nonaktifkan opsi Breadcrumbs dan Pengunjung.',
                     'title' => 'Umum',
 
                     'unit-options' => [
@@ -3726,6 +3728,12 @@ return [
                         'shop'       => 'Breadcrumbs Toko',
                         'title'      => 'Breadcrumbs',
                         'title-info' => 'Aktifkan atau nonaktifkan navigasi breadcrumb di toko.',
+                    ],
+
+                    'visitor-options' => [
+                        'enable'     => 'Aktifkan Opsi Pengunjung',
+                        'title'      => 'Opsi Pengunjung',
+                        'title-info' => 'Mengizinkan kontrol atas situs untuk melacak dan menghitung jumlah kunjungan, membantu memantau aktivitas dan keterlibatan pengunjung secara umum.',
                     ],
                 ],
 
@@ -4893,6 +4901,16 @@ return [
                 'title'                    => 'AI Assistance',
                 'vicuna-13b'               => 'Vicuna (13b)',
                 'vicuna-7b'                => 'Vicuna (7b)',
+            ],
+
+            'errors' => [
+                'file-extension-mismatch'        => 'Ekstensi file tidak cocok dengan jenis file.',
+                'file-upload-failed'             => 'Unggahan file gagal.',
+                'http-error'                     => 'Kesalahan HTTP.',
+                'invalid-file-type'              => 'Jenis file tidak valid. Jenis yang diizinkan: JPEG, PNG, GIF, WebP, SVG',
+                'invalid-json'                   => 'JSON tidak valid.',
+                'no-file-uploaded'               => 'Tidak ada file yang diunggah.',
+                'upload-failed'                  => 'Unggahan gambar gagal karena kesalahan transport XHR.',
             ],
         ],
     ],

@@ -1952,6 +1952,8 @@ return [
         ],
 
         'groups' => [
+            'customer-associate' => 'Questo gruppo ha clienti associati e non può essere eliminato.',
+
             'index' => [
                 'title' => 'Gruppi',
 
@@ -2302,8 +2304,8 @@ return [
                     'any-conditions-true'                       => 'Almeno una Condizione è Vera',
                     'apply-to-shipping'                         => 'Applica alla Spedizione',
                     'attribute-family'                          => 'Famiglia di Attributi',
-                    'attribute-name-children-only'              => 'Nome dell\'Attributo Solo Figli',
-                    'attribute-name-parent-only'                => 'Nome dell\'Attributo Solo Genitori',
+                    'attribute-name-children-only'              => ':attribute_name (Solo Figli)',
+                    'attribute-name-parent-only'                => ':attribute_name (Solo Genitori)',
                     'auto-generate-coupon'                      => 'Genera Coupon Automaticamente',
                     'back-btn'                                  => 'Indietro',
                     'buy-x-get-y-free'                          => 'Compra X Ottieni Y Gratis',
@@ -2379,8 +2381,8 @@ return [
                     'any-conditions-true'                       => 'Almeno una Condizione è Vera',
                     'apply-to-shipping'                         => 'Applica alla Spedizione',
                     'attribute-family'                          => 'Famiglia di Attributi',
-                    'attribute-name-children-only'              => 'Nome dell\'Attributo Solo Figli',
-                    'attribute-name-parent-only'                => 'Nome dell\'Attributo Solo Genitori',
+                    'attribute-name-children-only'              => ':attribute_name (Solo Figli)',
+                    'attribute-name-parent-only'                => ':attribute_name (Solo Genitori)',
                     'auto-generate-coupon'                      => 'Genera Coupon Automaticamente',
                     'back-btn'                                  => 'Indietro',
                     'buy-x-get-y-free'                          => 'Compra X Ottieni Y Gratis',
@@ -3712,7 +3714,7 @@ return [
                 'title' => 'Generale',
 
                 'general' => [
-                    'info'  => 'Imposta le opzioni delle unità e abilita o disabilita i breadcrumbs.',
+                    'info'  => 'Configura le impostazioni delle unità e attiva o disattiva le opzioni Breadcrumbs e Visitatori.',
                     'title' => 'Generale',
 
                     'unit-options' => [
@@ -3726,6 +3728,12 @@ return [
                         'shop'       => 'Breadcrumbs Negozio',
                         'title'      => 'Breadcrumbs',
                         'title-info' => 'Abilita o disabilita la navigazione tramite breadcrumbs nel negozio.',
+                    ],
+
+                    'visitor-options' => [
+                        'enable'     => 'Abilita opzioni visitatore',
+                        'title'      => 'Opzioni visitatore',
+                        'title-info' => 'Consente di controllare il sito per tracciare e contare il numero di visite, aiutando a monitorare l\'attività generale e il coinvolgimento dei visitatori.',
                     ],
                 ],
 
@@ -4893,6 +4901,16 @@ return [
                 'title'                    => 'Assistenza AI',
                 'vicuna-13b'               => 'Vicuna (13b)',
                 'vicuna-7b'                => 'Vicuna (7b)',
+            ],
+
+            'errors' => [
+                'file-extension-mismatch'        => 'L\'estensione del file non corrisponde al tipo di file.',
+                'file-upload-failed'             => 'Caricamento file non riuscito.',
+                'http-error'                     => 'Errore HTTP.',
+                'invalid-file-type'              => 'Tipo di file non valido. Tipi consentiti: JPEG, PNG, GIF, WebP, SVG',
+                'invalid-json'                   => 'JSON non valido.',
+                'no-file-uploaded'               => 'Nessun file caricato.',
+                'upload-failed'                  => 'Caricamento immagine non riuscito a causa di un errore di trasporto XHR.',
             ],
         ],
     ],

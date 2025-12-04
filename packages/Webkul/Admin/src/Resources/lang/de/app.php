@@ -1952,6 +1952,8 @@ return [
         ],
 
         'groups' => [
+            'customer-associate' => 'Diese Gruppe hat zugeordnete Kunden und kann nicht gelöscht werden.',
+
             'index' => [
                 'title' => 'Gruppen',
 
@@ -2302,8 +2304,8 @@ return [
                     'any-conditions-true'                       => 'Eine beliebige Bedingung ist wahr',
                     'apply-to-shipping'                         => 'Auf Versand anwenden',
                     'attribute-family'                          => 'Attributfamilie',
-                    'attribute-name-children-only'              => 'Attributname (Nur Unterkategorien)',
-                    'attribute-name-parent-only'                => 'Attributname (Nur Hauptkategorien)',
+                    'attribute-name-children-only'              => ':attribute_name (Nur Unterkategorien)',
+                    'attribute-name-parent-only'                => ':attribute_name (Nur Hauptkategorien)',
                     'auto-generate-coupon'                      => 'Coupon automatisch generieren',
                     'back-btn'                                  => 'Zurück',
                     'buy-x-get-y-free'                          => 'Kaufe X, erhalte Y kostenlos',
@@ -2379,8 +2381,8 @@ return [
                     'any-conditions-true'                       => 'Eine beliebige Bedingung ist wahr',
                     'apply-to-shipping'                         => 'Auf Versand anwenden',
                     'attribute-family'                          => 'Attributfamilie',
-                    'attribute-name-children-only'              => 'Attributname (nur Unterkategorien)',
-                    'attribute-name-parent-only'                => 'Attributname (nur Hauptkategorien)',
+                    'attribute-name-children-only'              => ':attribute_name (nur Unterkategorien)',
+                    'attribute-name-parent-only'                => ':attribute_name (nur Hauptkategorien)',
                     'auto-generate-coupon'                      => 'Coupon automatisch generieren',
                     'back-btn'                                  => 'Zurück',
                     'buy-x-get-y-free'                          => 'Kaufe X, erhalte Y kostenlos',
@@ -3712,7 +3714,7 @@ return [
                 'title' => 'Allgemein',
 
                 'general' => [
-                    'info'  => 'Einheitsoptionen festlegen und Breadcrumbs aktivieren oder deaktivieren.',
+                    'info'  => 'Konfigurieren Sie die Einheitseinstellungen und aktivieren oder deaktivieren Sie die Optionen für Breadcrumbs und Besucher.',
                     'title' => 'Allgemein',
 
                     'unit-options' => [
@@ -3726,6 +3728,12 @@ return [
                         'shop'       => 'Shop-Breadcrumbs',
                         'title'      => 'Breadcrumbs',
                         'title-info' => 'Aktivieren oder deaktivieren Sie die Breadcrumbs-Navigation im Shop.',
+                    ],
+
+                    'visitor-options' => [
+                        'enable'     => 'Besucheroptionen aktivieren',
+                        'title'      => 'Besucheroptionen',
+                        'title-info' => 'Ermöglicht die Kontrolle über die Website, um die Anzahl der Besuche zu verfolgen und zu zählen, was hilft, die allgemeine Besucheraktivität und das Engagement zu überwachen.',
                     ],
                 ],
 
@@ -4893,6 +4901,16 @@ return [
                 'title'                    => 'KI-Unterstützung',
                 'vicuna-13b'               => 'Vicuna (13b)',
                 'vicuna-7b'                => 'Vicuna (7b)',
+            ],
+
+            'errors' => [
+                'file-extension-mismatch'        => 'Dateierweiterung stimmt nicht mit dem Dateityp überein.',
+                'file-upload-failed'             => 'Datei-Upload fehlgeschlagen.',
+                'http-error'                     => 'HTTP-Fehler.',
+                'invalid-file-type'              => 'Ungültiger Dateityp. Zulässige Typen: JPEG, PNG, GIF, WebP, SVG',
+                'invalid-json'                   => 'Ungültiges JSON.',
+                'no-file-uploaded'               => 'Keine Datei hochgeladen.',
+                'upload-failed'                  => 'Bild-Upload aufgrund eines XHR-Transportfehlers fehlgeschlagen.',
             ],
         ],
     ],

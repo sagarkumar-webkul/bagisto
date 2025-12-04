@@ -27,6 +27,10 @@
         name="base-url"
         content="{{ url()->to('/') }}"
     >
+    <meta 
+        name="generator" 
+        content="Bagisto"
+    >
 
     @stack('meta')
 
@@ -48,7 +52,7 @@
             href="{{ Storage::url($favicon) }}"
             rel="shortcut icon"
             sizes="16x16"
-        >
+        />
     @else
         <link
             type="image/x-icon"

@@ -1952,6 +1952,8 @@ return [
         ],
 
         'groups' => [
+            'customer-associate' => 'This group has associated customers and cannot be deleted.',
+
             'index' => [
                 'title' => 'Groups',
 
@@ -2302,8 +2304,8 @@ return [
                     'any-conditions-true'                       => 'Any Conditions Are True',
                     'apply-to-shipping'                         => 'Apply to Shipping',
                     'attribute-family'                          => 'Attribute Family',
-                    'attribute-name-children-only'              => 'Attribute name Children Only',
-                    'attribute-name-parent-only'                => 'Attribute name Parent Only',
+                    'attribute-name-children-only'              => ':attribute_name (Children Only)',
+                    'attribute-name-parent-only'                => ':attribute_name (Parent Only)',
                     'auto-generate-coupon'                      => 'Auto Generate Coupon',
                     'back-btn'                                  => 'Back',
                     'buy-x-get-y-free'                          => 'Buy X Get Y Free',
@@ -2379,8 +2381,8 @@ return [
                     'any-conditions-true'                       => 'Any Conditions Are True',
                     'apply-to-shipping'                         => 'Apply to Shipping',
                     'attribute-family'                          => 'Attribute Family',
-                    'attribute-name-children-only'              => 'Attribute name children only',
-                    'attribute-name-parent-only'                => 'Attribute name parent only',
+                    'attribute-name-children-only'              => ':attribute_name (Children Only)',
+                    'attribute-name-parent-only'                => ':attribute_name (Parent Only)',
                     'auto-generate-coupon'                      => 'Auto Generate Coupon',
                     'back-btn'                                  => 'Back',
                     'buy-x-get-y-free'                          => 'Buy X Get Y Free',
@@ -3712,7 +3714,7 @@ return [
                 'title' => 'General',
 
                 'general' => [
-                    'info'  => 'Set units options and enable or disable breadcrumbs.',
+                    'info'  => 'Configure unit settings and toggle the Breadcrumbs and Visitor options on or off.',
                     'title' => 'General',
 
                     'unit-options' => [
@@ -3726,6 +3728,12 @@ return [
                         'shop'       => 'Shop Breadcrumbs',
                         'title'      => 'Breadcrumbs',
                         'title-info' => 'Enable or disable breadcrumbs navigation in the shop.',
+                    ],
+
+                    'visitor-options' => [
+                        'enable'     => 'Enable Visitor Options',
+                        'title'      => 'Visitor Options',
+                        'title-info' => 'Allows control over the site to track and count the number of visits, helping monitor general visitor activity and engagement.',
                     ],
                 ],
 
@@ -4893,6 +4901,16 @@ return [
                 'title'                    => 'AI Assistance',
                 'vicuna-13b'               => 'Vicuna (13b)',
                 'vicuna-7b'                => 'Vicuna (7b)',
+            ],
+
+            'errors' => [
+                'file-extension-mismatch'        => 'File extension does not match file type.',
+                'file-upload-failed'             => 'File upload failed.',
+                'http-error'                     => 'HTTP error.',
+                'invalid-file-type'              => 'Invalid file type. Allowed types: JPEG, PNG, GIF, WebP, SVG',
+                'invalid-json'                   => 'Invalid JSON.',
+                'no-file-uploaded'               => 'No file uploaded.',
+                'upload-failed'                  => 'Image upload failed due to a XHR Transport error.',
             ],
         ],
     ],

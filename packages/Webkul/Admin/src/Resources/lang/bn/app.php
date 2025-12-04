@@ -1952,6 +1952,8 @@ return [
         ],
 
         'groups' => [
+            'customer-associate' => 'এই গ্রুপের সাথে সম্পর্কিত গ্রাহক রয়েছে এবং এটি মুছে ফেলা যাবে না।',
+
             'index' => [
                 'title' => 'গ্রুপ',
 
@@ -2302,8 +2304,8 @@ return [
                     'any-conditions-true'                       => 'যে কোন শর্ত সত্য',
                     'apply-to-shipping'                         => 'শিপিংয়ে প্রয়োগ করুন',
                     'attribute-family'                          => 'বৈশিষ্ট্য পরিবার',
-                    'attribute-name-children-only'              => 'শিশু মাত্র বৈশিষ্ট্যের নাম',
-                    'attribute-name-parent-only'                => 'মাতৃপিতৃ মাত্র বৈশিষ্ট্যের নাম',
+                    'attribute-name-children-only'              => ':attribute_name (শিশু মাত্র)',
+                    'attribute-name-parent-only'                => ':attribute_name (মাতৃপিতৃ মাত্র)',
                     'auto-generate-coupon'                      => 'অটো জেনারেট কুপন',
                     'back-btn'                                  => 'পেছনে',
                     'buy-x-get-y-free'                          => 'X কেনে Y ফ্রি',
@@ -2379,8 +2381,8 @@ return [
                     'any-conditions-true'                       => 'যে কোন শর্ত সত্য',
                     'apply-to-shipping'                         => 'শিপিংয়ে প্রয়োগ করুন',
                     'attribute-family'                          => 'বৈশিষ্ট্য পরিবার',
-                    'attribute-name-children-only'              => 'শিশু মাত্র বৈশিষ্ট্যের নাম',
-                    'attribute-name-parent-only'                => 'মাতৃপিতৃ মাত্র বৈশিষ্ট্যের নাম',
+                    'attribute-name-children-only'              => ':attribute_name (শিশু মাত্র)',
+                    'attribute-name-parent-only'                => ':attribute_name (মাতৃপিতৃ মাত্র)',
                     'auto-generate-coupon'                      => 'অটো জেনারেট কুপন',
                     'back-btn'                                  => 'পেছনে',
                     'buy-x-get-y-free'                          => 'X কেনে Y ফ্রি',
@@ -2838,7 +2840,7 @@ return [
                     'locale-logo'      => 'লোকেল লোগো',
                     'name'             => 'নাম',
                     'save-btn'         => 'লোকেল সংরক্ষণ করুন',
-                    'select-direction' => 'দিশা নির্বাচন করুন',
+                    'select-direction' => 'দিক নির্বাচন করুন',
                     'title'            => 'নতুন লোকাল তৈরি করুন',
                 ],
 
@@ -3712,7 +3714,7 @@ return [
                 'title' => 'সাধারণ',
 
                 'general' => [
-                    'info'  => 'ইউনিট অপশন সেট করুন এবং ব্রেডক্রাম্বস সক্রিয় বা নিষ্ক্রিয় করুন।',
+                    'info'  => 'ইউনিট সেটিংস কনফিগার করুন এবং ব্রেডক্রাম্বস ও ভিজিটর অপশন চালু বা বন্ধ করুন।',
                     'title' => 'সাধারণ',
 
                     'unit-options' => [
@@ -3726,6 +3728,12 @@ return [
                         'shop'       => 'দোকান ব্রেডক্রাম্বস',
                         'title'      => 'ব্রেডক্রাম্বস',
                         'title-info' => 'দোকানে ব্রেডক্রাম্বস নেভিগেশন সক্রিয় বা নিষ্ক্রিয় করুন।',
+                    ],
+
+                    'visitor-options' => [
+                        'enable'     => 'ভিজিটর অপশন সক্রিয় করুন',
+                        'title'      => 'ভিজিটর অপশন',
+                        'title-info' => 'সাইটে ভিজিটর সংখ্যা ট্র্যাক ও গণনা করার নিয়ন্ত্রণ দেয়, যা সাধারণ ভিজিটর কার্যকলাপ ও সম্পৃক্ততা পর্যবেক্ষণে সহায়তা করে।',
                     ],
                 ],
 
@@ -4893,6 +4901,16 @@ return [
                 'title'                    => 'এআই সহায়তা',
                 'vicuna-13b'               => 'Vicuna (13b)',
                 'vicuna-7b'                => 'Vicuna (7b)',
+            ],
+
+            'errors' => [
+                'file-extension-mismatch'        => 'ফাইল এক্সটেনশন ফাইল প্রকারের সাথে মেলে না।',
+                'file-upload-failed'             => 'ফাইল আপলোড ব্যর্থ হয়েছে।',
+                'http-error'                     => 'HTTP ত্রুটি।',
+                'invalid-file-type'              => 'অবৈধ ফাইল প্রকার। অনুমোদিত প্রকার: JPEG, PNG, GIF, WebP, SVG',
+                'invalid-json'                   => 'অবৈধ JSON।',
+                'no-file-uploaded'               => 'কোন ফাইল আপলোড করা হয়নি।',
+                'upload-failed'                  => 'XHR ট্রান্সপোর্ট ত্রুটির কারণে ছবি আপলোড ব্যর্থ হয়েছে।',
             ],
         ],
     ],

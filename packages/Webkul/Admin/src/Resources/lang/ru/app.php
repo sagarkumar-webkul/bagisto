@@ -1952,6 +1952,8 @@ return [
         ],
 
         'groups' => [
+            'customer-associate' => 'Эта группа имеет связанных клиентов и не может быть удалена.',
+
             'index' => [
                 'title' => 'Группы',
 
@@ -2302,8 +2304,8 @@ return [
                     'any-conditions-true'                       => 'Любое условие верно',
                     'apply-to-shipping'                         => 'Применить к доставке',
                     'attribute-family'                          => 'Семейство атрибутов',
-                    'attribute-name-children-only'              => 'Имя атрибута (только дочерние)',
-                    'attribute-name-parent-only'                => 'Имя атрибута (только родительские)',
+                    'attribute-name-children-only'              => ':attribute_name (только дочерние)',
+                    'attribute-name-parent-only'                => ':attribute_name (только родительские)',
                     'auto-generate-coupon'                      => 'Автоматическая генерация промокода',
                     'back-btn'                                  => 'Назад',
                     'buy-x-get-y-free'                          => 'Купи X, получи Y бесплатно',
@@ -2379,8 +2381,8 @@ return [
                     'any-conditions-true'                       => 'Любое условие верно',
                     'apply-to-shipping'                         => 'Применить к доставке',
                     'attribute-family'                          => 'Семейство атрибутов',
-                    'attribute-name-children-only'              => 'Имя атрибута (только дочерние)',
-                    'attribute-name-parent-only'                => 'Имя атрибута (только родительские)',
+                    'attribute-name-children-only'              => ':attribute_name (только дочерние)',
+                    'attribute-name-parent-only'                => ':attribute_name (только родительские)',
                     'auto-generate-coupon'                      => 'Автоматическая генерация промокода',
                     'back-btn'                                  => 'Назад',
                     'buy-x-get-y-free'                          => 'Купи X, получи Y бесплатно',
@@ -3712,20 +3714,26 @@ return [
                 'title' => 'Общие настройки',
 
                 'general' => [
-                    'info'  => 'Установите параметры единиц измерения и включите или отключите хлебные крошки.',
-                    'title' => 'General',
+                    'info'  => 'Настройте параметры единиц измерения и включите или отключите опции хлебных крошек и посетителей.',
+                    'title' => 'Общие',
 
                     'unit-options' => [
-                        'info'        => 'Set units options.',
-                        'title'       => 'Unit Options',
+                        'info'        => 'Установите параметры единиц измерения.',
+                        'title'       => 'Параметры единиц измерения',
                         'title-info'  => 'Настройте вес в фунтах (lbs) или килограммах (kgs).',
-                        'weight-unit' => 'Weight Unit',
+                        'weight-unit' => 'Единица измерения веса',
                     ],
 
                     'breadcrumbs' => [
-                        'shop'       => 'Shop Breadcrumbs',
-                        'title'      => 'Breadcrumbs',
-                        'title-info' => 'Enable or disable breadcrumbs navigation in the shop.',
+                        'shop'       => 'Хлебные крошки магазина',
+                        'title'      => 'Хлебные крошки',
+                        'title-info' => 'Включить или отключить навигацию по хлебным крошкам в магазине.',
+                    ],
+
+                    'visitor-options' => [
+                        'enable'     => 'Включить опции посетителей',
+                        'title'      => 'Опции посетителей',
+                        'title-info' => 'Позволяет контролировать сайт для отслеживания и подсчета количества посещений, помогая отслеживать общую активность и вовлеченность посетителей.',
                     ],
                 ],
 
@@ -4893,6 +4901,16 @@ return [
                 'title'                  => 'Помощь ИИ',
                 'vicuna-13b'             => 'Vicuna (13b)',
                 'vicuna-7b'              => 'Vicuna (7b)',
+            ],
+
+            'errors' => [
+                'file-extension-mismatch'        => 'Расширение файла не соответствует типу файла.',
+                'file-upload-failed'             => 'Не удалось загрузить файл.',
+                'http-error'                     => 'Ошибка HTTP.',
+                'invalid-file-type'              => 'Недопустимый тип файла. Разрешенные типы: JPEG, PNG, GIF, WebP, SVG',
+                'invalid-json'                   => 'Недопустимый JSON.',
+                'no-file-uploaded'               => 'Файл не загружен.',
+                'upload-failed'                  => 'Не удалось загрузить изображение из-за ошибки передачи XHR.',
             ],
         ],
     ],

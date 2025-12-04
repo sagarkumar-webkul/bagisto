@@ -1952,6 +1952,8 @@ return [
         ],
 
         'groups' => [
+            'customer-associate' => 'इस समूह के पास संबंधित ग्राहक हैं और इसे हटाया नहीं जा सकता।',
+
             'index' => [
                 'title' => 'समूह',
 
@@ -2302,8 +2304,8 @@ return [
                     'any-conditions-true'                       => 'कोई भी शर्त सत्य है',
                     'apply-to-shipping'                         => 'शिपिंग पर लागू करें',
                     'attribute-family'                          => 'गुण परिवार',
-                    'attribute-name-children-only'              => 'गुण का नाम केवल बच्चों के लिए',
-                    'attribute-name-parent-only'                => 'गुण का नाम केवल माता-पिता के लिए',
+                    'attribute-name-children-only'              => ':attribute_name (केवल बच्चों के लिए)',
+                    'attribute-name-parent-only'                => ':attribute_name (केवल माता-पिता के लिए)',
                     'auto-generate-coupon'                      => 'कूपन स्वचालित रूप से उत्पन्न करें',
                     'back-btn'                                  => 'वापस',
                     'buy-x-get-y-free'                          => 'X खरीदें, Y मुफ्त प्राप्त करें',
@@ -2379,8 +2381,8 @@ return [
                     'any-conditions-true'                       => 'कोई भी शर्त सत्य है',
                     'apply-to-shipping'                         => 'शिपिंग पर लागू करें',
                     'attribute-family'                          => 'गुण परिवार',
-                    'attribute-name-children-only'              => 'गुण नाम केवल बच्चों के लिए',
-                    'attribute-name-parent-only'                => 'गुण नाम केवल माता-पिता के लिए',
+                    'attribute-name-children-only'              => ':attribute_name (केवल बच्चों के लिए)',
+                    'attribute-name-parent-only'                => ':attribute_name (केवल माता-पिता के लिए)',
                     'auto-generate-coupon'                      => 'कूपन स्वचालित रूप से उत्पन्न करें',
                     'back-btn'                                  => 'पीछे जाएं',
                     'buy-x-get-y-free'                          => 'X खरीदें और Y फ्री पाएं',
@@ -3712,7 +3714,7 @@ return [
                 'title' => 'सामान्य',
 
                 'general' => [
-                    'info'  => 'इकाई विकल्प सेट करें और ब्रेडक्रंब को सक्षम या अक्षम करें।',
+                    'info'  => 'इकाई सेटिंग्स कॉन्फ़िगर करें और ब्रेडक्रंब्स तथा विज़िटर विकल्प को चालू या बंद करें।',
                     'title' => 'सामान्य',
 
                     'unit-options' => [
@@ -3726,6 +3728,12 @@ return [
                         'shop'       => 'दुकान ब्रेडक्रंब्स',
                         'title'      => 'ब्रेडक्रंब्स',
                         'title-info' => 'दुकान में ब्रेडक्रंब्स नेविगेशन को सक्षम या अक्षम करें।',
+                    ],
+
+                    'visitor-options' => [
+                        'enable'     => 'विज़िटर विकल्प सक्षम करें',
+                        'title'      => 'विज़िटर विकल्प',
+                        'title-info' => 'साइट पर विज़िट्स को ट्रैक और गिनने के लिए नियंत्रण की अनुमति देता है, जिससे सामान्य विज़िटर गतिविधि और सहभागिता की निगरानी में मदद मिलती है।',
                     ],
                 ],
 
@@ -4893,6 +4901,16 @@ return [
                 'title'                    => 'एआई सहायता',
                 'vicuna-13b'               => 'Vicuna (13b)',
                 'vicuna-7b'                => 'Vicuna (7b)',
+            ],
+
+            'errors' => [
+                'file-extension-mismatch'        => 'फ़ाइल एक्सटेंशन फ़ाइल प्रकार से मेल नहीं खाता।',
+                'file-upload-failed'             => 'फ़ाइल अपलोड विफल रहा।',
+                'http-error'                     => 'HTTP त्रुटि।',
+                'invalid-file-type'              => 'अमान्य फ़ाइल प्रकार। अनुमत प्रकार: JPEG, PNG, GIF, WebP, SVG',
+                'invalid-json'                   => 'अमान्य JSON।',
+                'no-file-uploaded'               => 'कोई फ़ाइल अपलोड नहीं की गई।',
+                'upload-failed'                  => 'XHR ट्रांसपोर्ट त्रुटि के कारण छवि अपलोड विफल रहा।',
             ],
         ],
     ],

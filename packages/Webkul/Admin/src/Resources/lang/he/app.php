@@ -1952,6 +1952,8 @@ return [
         ],
 
         'groups' => [
+            'customer-associate' => 'לקבוצה זו יש לקוחות משויכים ולא ניתן למחוק אותה.',
+
             'index' => [
                 'title' => 'קבוצות',
 
@@ -2302,8 +2304,8 @@ return [
                     'any-conditions-true'                       => 'לפחות תנאי אחד נכון',
                     'apply-to-shipping'                         => 'החל למשלוח',
                     'attribute-family'                          => 'משפחת התכונות',
-                    'attribute-name-children-only'              => 'שם התכונה (רק ילדים)',
-                    'attribute-name-parent-only'                => 'שם התכונה (רק הורים)',
+                    'attribute-name-children-only'              => ':attribute_name (רק ילדים)',
+                    'attribute-name-parent-only'                => ':attribute_name (רק הורים)',
                     'auto-generate-coupon'                      => 'יצירת קופון אוטומטית',
                     'back-btn'                                  => 'חזרה',
                     'buy-x-get-y-free'                          => 'קנה X וקבל Y בחינם',
@@ -2379,8 +2381,8 @@ return [
                     'any-conditions-true'                       => 'לפחות תנאי אחד נכון',
                     'apply-to-shipping'                         => 'החל למשלוח',
                     'attribute-family'                          => 'משפחת התכונות',
-                    'attribute-name-children-only'              => 'שם התכונה (רק ילדים)',
-                    'attribute-name-parent-only'                => 'שם התכונה (רק הורים)',
+                    'attribute-name-children-only'              => ':attribute_name (רק ילדים)',
+                    'attribute-name-parent-only'                => ':attribute_name (רק הורים)',
                     'auto-generate-coupon'                      => 'יצירת קופון אוטומטית',
                     'back-btn'                                  => 'חזרה',
                     'buy-x-get-y-free'                          => 'קנה X וקבל Y בחינם',
@@ -3712,7 +3714,7 @@ return [
                 'title' => 'כללי',
 
                 'general' => [
-                    'info'  => 'הגדר אפשרויות יחידות והפעל או השבת מסלולי ניווט.',
+                    'info'  => 'הגדר אפשרויות יחידות והפעל או השבת את אפשרויות מסלולי הניווט והמבקרים.',
                     'title' => 'כללי',
 
                     'unit-options' => [
@@ -3726,6 +3728,12 @@ return [
                         'shop'       => 'מסלולי ניווט בחנות',
                         'title'      => 'מסלולי ניווט',
                         'title-info' => 'הפעל או השבת מסלולי ניווט בחנות.',
+                    ],
+
+                    'visitor-options' => [
+                        'enable'     => 'הפעל אפשרויות מבקרים',
+                        'title'      => 'אפשרויות מבקרים',
+                        'title-info' => 'מאפשר שליטה באתר למעקב וספירת מספר הביקורים, מסייע במעקב אחר פעילות ומעורבות כללית של מבקרים.',
                     ],
                 ],
 
@@ -4893,6 +4901,16 @@ return [
                 'title'                    => 'סיוע AI',
                 'vicuna-13b'               => 'Vicuna (13b)',
                 'vicuna-7b'                => 'Vicuna (7b)',
+            ],
+
+            'errors' => [
+                'file-extension-mismatch'        => 'סיומת הקובץ אינה תואמת לסוג הקובץ.',
+                'file-upload-failed'             => 'העלאת הקובץ נכשלה.',
+                'http-error'                     => 'שגיאת HTTP.',
+                'invalid-file-type'              => 'סוג קובץ לא חוקי. סוגים מותרים: JPEG, PNG, GIF, WebP, SVG',
+                'invalid-json'                   => 'JSON לא חוקי.',
+                'no-file-uploaded'               => 'לא הועלה קובץ.',
+                'upload-failed'                  => 'העלאת התמונה נכשלה עקב שגיאת העברת XHR.',
             ],
         ],
     ],

@@ -1952,6 +1952,8 @@ return [
         ],
 
         'groups' => [
+            'customer-associate' => 'Deze groep heeft geassocieerde klanten en kan niet worden verwijderd.',
+
             'index' => [
                 'title' => 'Groepen',
 
@@ -2302,8 +2304,8 @@ return [
                     'any-conditions-true'                       => 'Een Van De Voorwaarden Is Waar',
                     'apply-to-shipping'                         => 'Toepassen op Verzending',
                     'attribute-family'                          => 'Attribuutfamilie',
-                    'attribute-name-children-only'              => 'Attribuutnaam (alleen kinderen)',
-                    'attribute-name-parent-only'                => 'Attribuutnaam (alleen ouders)',
+                    'attribute-name-children-only'              => ':attribute_name (alleen voor subcategorieën)',
+                    'attribute-name-parent-only'                => ':attribute_name (alleen voor hoofdcategorieën)',
                     'auto-generate-coupon'                      => 'Automatisch Coupon Genereren',
                     'back-btn'                                  => 'Terug',
                     'buy-x-get-y-free'                          => 'Koop X, Krijg Y Gratis',
@@ -2379,8 +2381,8 @@ return [
                     'any-conditions-true'                       => 'Een Van De Voorwaarden Is Waar',
                     'apply-to-shipping'                         => 'Toepassen Op Verzending',
                     'attribute-family'                          => 'Attribuutfamilie',
-                    'attribute-name-children-only'              => 'Naam van attribuut alleen voor subcategorieën',
-                    'attribute-name-parent-only'                => 'Naam van attribuut alleen voor hoofdcategorieën',
+                    'attribute-name-children-only'              => ':attribute_name (alleen voor subcategorieën)',
+                    'attribute-name-parent-only'                => ':attribute_name (alleen voor hoofdcategorieën)',
                     'auto-generate-coupon'                      => 'Automatisch Coupon Genereren',
                     'back-btn'                                  => 'Terug',
                     'buy-x-get-y-free'                          => 'Koop X, Krijg Y Gratis',
@@ -3712,20 +3714,26 @@ return [
                 'title' => 'Algemeen',
 
                 'general' => [
-                    'info'  => 'Stel eenhedensopties in en schakel broodkruimelnavigatie in of uit.',
+                    'info'  => 'Configureer eenheidsinstellingen en schakel de opties voor Breadcrumbs en Bezoekers in of uit.',
                     'title' => 'Algemeen',
 
                     'unit-options' => [
                         'info'        => 'Stel eenhedensopties in.',
                         'title'       => 'Eenheidsopties',
-                        'title-info'  => 'Configureer het gewicht in ponden (lbs) of kilogrammen (kgs).',
+                        'title-info'  => 'Configureer het gewicht in ponden (lbs) of kilogrammen (kg).',
                         'weight-unit' => 'Gewichtseenheid',
                     ],
 
                     'breadcrumbs' => [
-                        'shop'       => 'Shop Breadcrumbs',
-                        'title'      => 'Breadcrumbs',
+                        'shop'       => 'Shop broodkruimels',
+                        'title'      => 'Broodkruimels',
                         'title-info' => 'Schakel broodkruimelnavigatie in of uit in de winkel.',
+                    ],
+
+                    'visitor-options' => [
+                        'enable'     => 'Bezoekersopties inschakelen',
+                        'title'      => 'Bezoekersopties',
+                        'title-info' => 'Hiermee kun je het bijhouden en tellen van het aantal bezoeken aan de site beheren, wat helpt om algemene bezoekersactiviteit en betrokkenheid te monitoren.',
                     ],
                 ],
 
@@ -4893,6 +4901,16 @@ return [
                 'title'                    => 'AI Assistentie',
                 'vicuna-13b'               => 'Vicuna (13b)',
                 'vicuna-7b'                => 'Vicuna (7b)',
+            ],
+
+            'errors' => [
+                'file-extension-mismatch'        => 'Bestandsextensie komt niet overeen met bestandstype.',
+                'file-upload-failed'             => 'Bestand uploaden mislukt.',
+                'http-error'                     => 'HTTP-fout.',
+                'invalid-file-type'              => 'Ongeldig bestandstype. Toegestane types: JPEG, PNG, GIF, WebP, SVG',
+                'invalid-json'                   => 'Ongeldige JSON.',
+                'no-file-uploaded'               => 'Geen bestand geüpload.',
+                'upload-failed'                  => 'Afbeelding uploaden mislukt vanwege een XHR-transportfout.',
             ],
         ],
     ],

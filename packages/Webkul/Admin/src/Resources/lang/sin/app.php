@@ -1952,6 +1952,8 @@ return [
         ],
 
         'groups' => [
+            'customer-associate' => 'මෙම කණ්ඩායමට සම්බන්ධිත පාරිභෝගිකයින් ඇති අතර එය මකා දැමිය නොහැක.',
+
             'index' => [
                 'title' => 'කණ්ඩායම්',
 
@@ -2302,8 +2304,8 @@ return [
                     'any-conditions-true'                       => 'ඕනෑම තත්වයක්ම සත්‍ය',
                     'apply-to-shipping'                         => 'නැවතුම්කරන්න',
                     'attribute-family'                          => 'අයිතම පවරනය',
-                    'attribute-name-children-only'              => 'අයිතම නම(පුණ්කර පමණ)',
-                    'attribute-name-parent-only'                => 'අයිතම නම(මව පමණ)',
+                    'attribute-name-children-only'              => ':attribute_name (පුණ්කර පමණ)',
+                    'attribute-name-parent-only'                => ':attribute_name (මව පමණ)',
                     'auto-generate-coupon'                      => 'ස්වික්රයෙන් කූපනය සාදන්න',
                     'back-btn'                                  => 'ආපසු',
                     'buy-x-get-y-free'                          => 'X අතර Y න් නොමෙයා',
@@ -2379,8 +2381,8 @@ return [
                     'any-conditions-true'                       => 'ඕනෑම තත්වයක්ම සත්‍ය',
                     'apply-to-shipping'                         => 'නැවතුම්කරන්න',
                     'attribute-family'                          => 'අයිතම පවරනය',
-                    'attribute-name-children-only'              => 'අයිතම නම(පුණ්කර පමණ)',
-                    'attribute-name-parent-only'                => 'අයිතම නම(මව පමණ)',
+                    'attribute-name-children-only'              => ':attribute_name (පුණ්කර පමණ)',
+                    'attribute-name-parent-only'                => ':attribute_name (මව පමණ)',
                     'auto-generate-coupon'                      => 'ස්වික්රයෙන් කූපනය සාදන්න',
                     'back-btn'                                  => 'ආපසු',
                     'buy-x-get-y-free'                          => 'X අතර Y න් නොමෙයා',
@@ -3712,13 +3714,13 @@ return [
                 'title' => 'සාමාන්‍ය',
 
                 'general' => [
-                    'info'  => 'ඒකක විකල්ප සකසන්න සහ බ්‍රේඩ්ක්‍රම්ස් සක්‍රීය හෝ අක්‍රීය කරන්න.',
+                    'info'  => 'ඒකක සැකසුම් වින්‍යාස කරන්න සහ බ්‍රේඩ්ක්‍රම්ස් සහ පරිච්ඡේදක විකල්ප සක්‍රීය හෝ අක්‍රීය කරන්න.',
                     'title' => 'සාමාන්‍ය',
 
                     'unit-options' => [
                         'info'        => 'ඒකක වින්‍යාසයේ විකල්ප විකල්ප සැකසීමේ විකල්ප.',
-                        'title'       => 'ිරික්ෂණ විකල්ප',
-                        'title-info'  => 'බර ඒකකයේ විකල්ප සැකසීමේ විකල්ප සැකසීමේ විකල්ප.',
+                        'title'       => 'ඒකක විකල්ප',
+                        'title-info'  => 'බර ඒකකයේ විකල්ප සැකසීමේ විකල්ප.',
                         'weight-unit' => 'බර ඒකකය',
                     ],
 
@@ -3726,6 +3728,12 @@ return [
                         'shop'       => 'සාප්පු බ්‍රේඩ්ක්‍රම්ස්',
                         'title'      => 'බ්‍රේඩ්ක්‍රම්ස්',
                         'title-info' => 'සාප්පුවෙහි බ්‍රේඩ්ක්‍රම්ස් පාලනය සහාය සක්‍රිය කිරීම හෝ අක්‍රිය කිරීම.',
+                    ],
+
+                    'visitor-options' => [
+                        'enable'     => 'පිරික්සුම් විකල්ප සක්‍රීය කරන්න',
+                        'title'      => 'පිරික්සුම් විකල්ප',
+                        'title-info' => 'අඩවියට පැමිණෙන සංඛ්‍යාව පාලනය හා ගණන් කිරීම සඳහා පාලනය සපයයි, සාමාන්‍ය පිරික්සුම් ක්‍රියාකාරකම් හා සම්බන්ධතාවය නිරීක්ෂණය කිරීමට උපකාරී වේ.',
                     ],
                 ],
 
@@ -4893,6 +4901,16 @@ return [
                 'title'                  => 'AI සහාය',
                 'vicuna-13b'             => 'Vicuna (13b)',
                 'vicuna-7b'              => 'Vicuna (7b)',
+            ],
+
+            'errors' => [
+                'file-extension-mismatch'        => 'ගොනු දිගුව ගොනු වර්ගයට නොගැලපේ.',
+                'file-upload-failed'             => 'ගොනු උඩුගත කිරීම අසාර්ථක විය.',
+                'http-error'                     => 'HTTP දෝෂයකි.',
+                'invalid-file-type'              => 'වලංගු නොවන ගොනු වර්ගයකි. අනුමත වර්ග: JPEG, PNG, GIF, WebP, SVG',
+                'invalid-json'                   => 'වලංගු නොවන JSON.',
+                'no-file-uploaded'               => 'කිසිදු ගොනුවක් උඩුගත කර නැත.',
+                'upload-failed'                  => 'XHR ප්‍රවාහන දෝෂයක් හේතුවෙන් රූපය උඩුගත කිරීම අසාර්ථක විය.',
             ],
         ],
     ],

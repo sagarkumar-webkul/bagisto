@@ -1952,6 +1952,8 @@ return [
         ],
 
         'groups' => [
+            'customer-associate' => 'Bu grubun ilişkili müşterileri var ve silinemez.',
+
             'index' => [
                 'title' => 'Gruplar',
 
@@ -2302,8 +2304,8 @@ return [
                     'any-conditions-true'                       => 'Herhangi Bir Koşul Doğru',
                     'apply-to-shipping'                         => 'Kargo Üzerine Uygula',
                     'attribute-family'                          => 'Özellik Ailesi',
-                    'attribute-name-children-only'              => 'Özellik Adı (Sadece Çocuklar)',
-                    'attribute-name-parent-only'                => 'Özellik Adı (Sadece Ebeveynler)',
+                    'attribute-name-children-only'              => ':attribute_name (Sadece Çocuklar)',
+                    'attribute-name-parent-only'                => ':attribute_name (Sadece Ebeveynler)',
                     'auto-generate-coupon'                      => 'Kupon Otomatik Üret',
                     'back-btn'                                  => 'Geri',
                     'buy-x-get-y-free'                          => 'X Ürün Al, Y Ürün Bedava',
@@ -2379,8 +2381,8 @@ return [
                     'any-conditions-true'                       => 'Herhangi Bir Koşul Doğru',
                     'apply-to-shipping'                         => 'Kargo Üzerine Uygula',
                     'attribute-family'                          => 'Özellik Ailesi',
-                    'attribute-name-children-only'              => 'Sadece Çocuklar için Özellik Adı',
-                    'attribute-name-parent-only'                => 'Sadece Ebeveynler için Özellik Adı',
+                    'attribute-name-children-only'              => ':attribute_name (Sadece Çocuklar)',
+                    'attribute-name-parent-only'                => ':attribute_name (Sadece Ebeveynler)',
                     'auto-generate-coupon'                      => 'Otomatik Kupon Oluştur',
                     'back-btn'                                  => 'Geri',
                     'buy-x-get-y-free'                          => 'X Ürün Al Y Ürün Bedava',
@@ -3712,7 +3714,7 @@ return [
                 'title' => 'Genel',
 
                 'general' => [
-                    'info'  => 'Birim seçeneklerini ayarlayın ve breadcrumbs\'ı etkinleştirin veya devre dışı bırakın.',
+                    'info'  => 'Birim ayarlarını yapılandırın ve Breadcrumbs ile Ziyaretçi seçeneklerini açıp kapatın.',
                     'title' => 'Genel',
 
                     'unit-options' => [
@@ -3726,6 +3728,12 @@ return [
                         'shop'       => 'Mağaza Breadcrumbs',
                         'title'      => 'Breadcrumbs',
                         'title-info' => 'Mağazada breadcrumbs gezinmesini etkinleştirin veya devre dışı bırakın.',
+                    ],
+
+                    'visitor-options' => [
+                        'enable'     => 'Ziyaretçi Seçeneklerini Etkinleştir',
+                        'title'      => 'Ziyaretçi Seçenekleri',
+                        'title-info' => 'Site üzerinde ziyaretçi sayısını izlemek ve saymak için kontrol sağlar, genel ziyaretçi etkinliğini ve etkileşimini izlemeye yardımcı olur.',
                     ],
                 ],
 
@@ -4893,6 +4901,16 @@ return [
                 'title'                  => 'AI Yardımı',
                 'vicuna-13b'             => 'Vicuna (13b)',
                 'vicuna-7b'              => 'Vicuna (7b)',
+            ],
+
+            'errors' => [
+                'file-extension-mismatch'        => 'Dosya uzantısı dosya türüyle eşleşmiyor.',
+                'file-upload-failed'             => 'Dosya yükleme başarısız oldu.',
+                'http-error'                     => 'HTTP hatası.',
+                'invalid-file-type'              => 'Geçersiz dosya türü. İzin verilen türler: JPEG, PNG, GIF, WebP, SVG',
+                'invalid-json'                   => 'Geçersiz JSON.',
+                'no-file-uploaded'               => 'Hiçbir dosya yüklenmedi.',
+                'upload-failed'                  => 'XHR aktarım hatası nedeniyle resim yüklenemedi.',
             ],
         ],
     ],

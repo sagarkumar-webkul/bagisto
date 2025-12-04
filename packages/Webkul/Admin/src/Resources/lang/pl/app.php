@@ -1952,6 +1952,8 @@ return [
         ],
 
         'groups' => [
+            'customer-associate' => 'Ta grupa ma powiązanych klientów i nie może zostać usunięta.',
+
             'index' => [
                 'title' => 'Grupy',
 
@@ -2302,8 +2304,8 @@ return [
                     'any-conditions-true'                       => 'Jakiekolwiek Warunki Są Prawdziwe',
                     'apply-to-shipping'                         => 'Zastosuj do Dostawy',
                     'attribute-family'                          => 'Rodzina Atrybutów',
-                    'attribute-name-children-only'              => 'Nazwa Atrybutu (Tylko Dzieci)',
-                    'attribute-name-parent-only'                => 'Nazwa Atrybutu (Tylko Rodzice)',
+                    'attribute-name-children-only'              => ':attribute_name (Tylko Dzieci)',
+                    'attribute-name-parent-only'                => ':attribute_name (Tylko Rodzice)',
                     'auto-generate-coupon'                      => 'Automatycznie Generowany Kupon',
                     'back-btn'                                  => 'Powrót',
                     'buy-x-get-y-free'                          => 'Kup X, Zdobądź Y za Darmo',
@@ -2379,8 +2381,8 @@ return [
                     'any-conditions-true'                       => 'Jakiekolwiek Warunki Są Prawdziwe',
                     'apply-to-shipping'                         => 'Zastosuj do Dostawy',
                     'attribute-family'                          => 'Rodzina Atrybutów',
-                    'attribute-name-children-only'              => 'Nazwa Atrybutu (Tylko Dzieci)',
-                    'attribute-name-parent-only'                => 'Nazwa Atrybutu (Tylko Rodzice)',
+                    'attribute-name-children-only'              => ':attribute_name (Tylko Dzieci)',
+                    'attribute-name-parent-only'                => ':attribute_name (Tylko Rodzice)',
                     'auto-generate-coupon'                      => 'Automatycznie Generowany Kupon',
                     'back-btn'                                  => 'Powrót',
                     'buy-x-get-y-free'                          => 'Kup X, Zdobądź Y za Darmo',
@@ -3712,13 +3714,13 @@ return [
                 'title' => 'Ogólne',
 
                 'general' => [
-                    'info'  => 'Ustaw opcje jednostek i włącz lub wyłącz ścieżki nawigacyjne.',
+                    'info'  => 'Skonfiguruj ustawienia jednostek oraz włącz lub wyłącz opcje ścieżki nawigacyjnej i odwiedzających.',
                     'title' => 'Ogólne',
 
                     'unit-options' => [
                         'info'        => 'Ustaw opcje jednostek.',
                         'title'       => 'Opcje jednostek',
-                        'title-info'  => 'Skonfiguruj wagę w funtach (lbs) lub kilogramach (kgs).',
+                        'title-info'  => 'Skonfiguruj wagę w funtach (lbs) lub kilogramach (kg).',
                         'weight-unit' => 'Jednostka wagi',
                     ],
 
@@ -3726,6 +3728,12 @@ return [
                         'shop'       => 'Ścieżka nawigacyjna sklepu',
                         'title'      => 'Ścieżka nawigacyjna',
                         'title-info' => 'Włącz lub wyłącz nawigację ścieżki nawigacyjnej w sklepie.',
+                    ],
+
+                    'visitor-options' => [
+                        'enable'     => 'Włącz opcje odwiedzających',
+                        'title'      => 'Opcje odwiedzających',
+                        'title-info' => 'Pozwala kontrolować witrynę w celu śledzenia i liczenia liczby wizyt, pomagając monitorować ogólną aktywność i zaangażowanie odwiedzających.',
                     ],
                 ],
 
@@ -4893,6 +4901,16 @@ return [
                 'title'                    => 'Asystent AI',
                 'vicuna-13b'               => 'Vicuna (13b)',
                 'vicuna-7b'                => 'Vicuna (7b)',
+            ],
+
+            'errors' => [
+                'file-extension-mismatch'        => 'Rozszerzenie pliku nie pasuje do typu pliku.',
+                'file-upload-failed'             => 'Przesyłanie pliku nie powiodło się.',
+                'http-error'                     => 'Błąd HTTP.',
+                'invalid-file-type'              => 'Nieprawidłowy typ pliku. Dozwolone typy: JPEG, PNG, GIF, WebP, SVG',
+                'invalid-json'                   => 'Nieprawidłowy JSON.',
+                'no-file-uploaded'               => 'Nie przesłano pliku.',
+                'upload-failed'                  => 'Przesyłanie obrazu nie powiodło się z powodu błędu transportu XHR.',
             ],
         ],
     ],
